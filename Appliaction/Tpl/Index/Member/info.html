@@ -1,0 +1,128 @@
+<include file="Public:header"/>       
+<div class="col-sm-12 widget-container-span">
+	<div class="widget-box transparent">
+            <div class="widget-header">
+			<div class="widget-toolbar no-border">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="active"><a data-toggle="tab" href="#home1">一级会员</a></li>
+					<li><a data-toggle="tab" href="#home2">二级会员</a></li>
+                                        <li><a data-toggle="tab" href="#home3">三级会员</a></li>                                   
+				</ul>
+			</div>
+		</div>
+        <div class="widget-body">
+			<div class="widget-main padding-12 no-padding-left no-padding-right">
+				<div class="tab-content padding-4">
+					<div id="home1" class="tab-pane in active">
+						<div class="row">
+							<div class="col-xs-12 no-padding-right">
+								<div class="table-responsive">
+                                                                    <table id="sample-table-1"class="table table-striped table-bordered table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <td>ID</td>
+                                                                                <td>用户名</td>
+                                                                                <td>联系方式</td>
+                                                                                <td>加入时间</td>
+                                                                                <td>累计积分</td>
+                                                                            </tr>
+                                                                        </thead>
+
+                                                                      <tbody id="list">   
+                                                                      <volist id="result" name="result">
+                                                                                <tr>
+                                                                                    <td>{$result['tb_id']}</td>
+                                                                                    <td>{$result['tb_username']}</td>
+                                                                                    <td>{$result['tb_phone']}</td>
+                                                                                    <td>{$result['tb_reg_time']}</td>
+                                                                                    <td>{$result['tb_jifen']}</td>
+                                                                                </tr> 
+
+                                                                            </volist>
+                                                                    </tbody>
+                                                                    </table>
+                                                                    <div class="pagination" style="margin:0px;">
+									    {$page}<input type=text id='goto' style="width:40px;border:1px solid #ccc;margin:3px;" /><input type=button id="goto_button" value="转到" />
+									</div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                              </div>
+                                    
+                                    
+                                           <div id="home2" class="tab-pane in">
+						<div class="row">
+							<div class="col-xs-12 no-padding-right">
+                                                            <div class="table-responsive">
+                                                                         
+                                                              <table id="sample-table-1"class="table table-striped table-bordered table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <td>ID</td>
+                                                                                <td>用户名</td>
+                                                                                <td>联系方式</td>
+                                                                                <td>加入时间</td>
+                                                                                <td>累计积分</td>
+                                                                            </tr>
+                                                                        </thead>
+
+                                                                      <tbody id="list">   
+                                                                      <volist id="result2" name="result2">
+                                                                                <tr>
+                                                                                    <td>{$result2['tb_id']}</td>
+                                                                                    <td>{$result2['tb_username']}</td>
+                                                                                    <td>{$result2['tb_phone']}</td>
+                                                                                    <td>{$result2['tb_reg_time']}</td>
+                                                                                    <td>{$result2['tb_jifen']}</td>
+                                                                                </tr> 
+
+                                                                            </volist>
+                                                                    </tbody>
+                                                                    </table>
+                                                                    <div class="pagination" style="margin:0px;">
+									    {$page2}<input type=text id='goto' style="width:40px;border:1px solid #ccc;margin:3px;" /><input type=button id="goto_button" value="转到" />
+									</div>
+                       
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            
+                                    
+                                           <div id="home3" class="tab-pane in">
+						<div class="row">
+							<div class="col-xs-12 no-padding-right">
+                                                            <div class="table-responsive">
+                                                               <table id="sample-table-1"class="table table-striped table-bordered table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <td>ID</td>
+                                                                                <td>用户名</td>
+                                                                                <td>联系方式</td>
+                                                                                <td>加入时间</td>
+                                                                                <td>累计积分</td>
+                                                                            </tr>
+                                                                        </thead>
+
+                                                                      <tbody id="list">   
+                                                                      <volist id="result3" name="result3">
+                                                                                <tr>
+                                                                                    <td>{$result3['tb_id']}</td>
+                                                                                    <td>{$result3['tb_username']}</td>
+                                                                                    <td>{$result3['tb_phone']}</td>
+                                                                                    <td>{$result3['tb_reg_time']}</td>
+                                                                                    <td>{$result['tb_jifen']}</td>
+                                                                                </tr> 
+
+                                                                            </volist>
+                                                                    </tbody>
+                                                                    </table>
+                                                                    <div class="pagination" style="margin:0px;">
+									    {$page3}<input type=text id='goto' style="width:40px;border:1px solid #ccc;margin:3px;" /><input type=button id="goto_button" value="转到" />
+									</div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                     <a class="btn" href="{:U('Index/Member/fenxiao',array('id'=>$_GET['id']))}">返回</a>

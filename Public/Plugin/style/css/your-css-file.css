@@ -1,0 +1,8 @@
+#cplist{width: 100%;    margin-top: 10px;}
+#cplist ul li{float: left;list-style: none;width: 48%;height: auto;margin-right: 1%; margin-left: 1%;margin-bottom:7px;background: #fff;}
+#cplist ul li img{width: 100%;}
+.cptitle{padding-right: 6px; padding-left: 6px; height: 23px; overflow: hidden; font-size: 14px; margin-top: 0px; color: #666;font-family: "Heiti SC";font-weight:300;}
+.cprice{font-size: 16px; color: #f8285c; padding-left: 4px;margin-top: 3px; margin-bottom: 3px;}
+.cprice span{color: #b2b2b2; text-decoration: line-through; margin-left: 2px; font-size: 10px; font-family: arial;}
+#menulist{color: #fff;}
+.content-padded img{width: 100%;}

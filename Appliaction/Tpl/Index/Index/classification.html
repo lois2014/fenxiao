@@ -1,0 +1,50 @@
+<include file="Public:header"/>
+<html>
+    <head>
+        <title>
+            品牌分类
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+       
+    <ul class="nav nav-tabs" id="myTab">
+          <li class="active"><a href="#home1">婴儿产品</a></li>
+          <li><a href="#home2">零食</a></li>
+          <li><a href="#home3">水果</a></li>
+        </ul>
+           
+        <div class="tab-content">
+            <div class="tab-pane active" id="home1">
+                <li>尿不湿</li>
+                <li>奶粉</li>
+                <li>奶瓶</li>
+                <li>服饰</li>
+            </div>
+            <div class="tab-pane" id="home2">
+                <li>干果</li>
+                <li>小吃</li>
+                
+            </div>
+          <div class="tab-pane" id="home3">
+              <li>火龙果</li>
+                <li>苹果</li>
+                <li>猕猴桃</li>
+          </div>
+        </div>
+           <a href="{:U('Index/Index/index',array('id'=>$_GET['id']))}"> 返回首页</a>
+        <script>
+          $(function () {
+            $('#myTab a:last').tab('show');//初始化显示哪个tab
+          
+            $('#myTab a').click(function (e) {
+              e.preventDefault();//阻止a链接的跳转行为
+              $(this).tab('show');//显示当前选中的链接及关联的content
+            })
+          })
+        </script>
+
+    </body>
+</html>

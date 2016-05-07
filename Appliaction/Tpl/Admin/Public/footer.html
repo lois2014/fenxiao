@@ -1,0 +1,56 @@
+		<script type="text/javascript">
+                    
+                    
+                /*商城设置*/    
+                $('.nav.nav-list li').eq(0).click(function() {
+			$('.nav.nav-list li').removeClass('active');
+			$(this).addClass('active');
+                        $('#breadcrumbs ul li').eq(0).html('商城设置'); 
+                        $('#main_iframe').attr("src","{:U('Admin/Index/set')}");
+			//$(window.location.href="{:U('Admin/Index/index')}");
+		});    
+                    
+                 /*菜单管理*/   
+		$('.nav.nav-list li').eq(1).click(function() {
+			$('.nav.nav-list li').removeClass('active');
+			$(this).addClass('active');
+                        $('#breadcrumbs ul li').eq(1).html('菜单管理'); 
+			//$(window.location.href="{:U('Admin/Menu/index')}");
+                        $('#main_iframe').attr("src","{:U('Admin/Menu/index')}");
+		});
+		/* 分销商管理 */
+		$('.nav.nav-list li').eq(2).click(function() {
+			$('.nav.nav-list li').removeClass('active');
+			$(this).addClass('active');
+                        $('#breadcrumbs ul li').eq(1).html('分销商管理');       
+			
+                        //$(window.location.href="{:U('Admin/Business/index')}");
+			$('#main_iframe').attr("src","{:U('Admin/Business/index')}");
+		});
+                //用户管理
+                $('.nav.nav-list li').eq(3).click(function() {
+			$('.nav.nav-list li').removeClass('active');
+			$(this).addClass('active');
+                        $('#breadcrumbs ul li').eq(1).html('用户管理');
+                       // $(window.location.href="{:U('Admin/User/index')}");
+			
+			$('#main_iframe').attr("src","{:U('Admin/User/index')}");
+		});
+                $('.nav.nav-list li').eq(4).click(function() {
+			$('.nav.nav-list li').removeClass('active');
+			$(this).addClass('active');
+                        $('#breadcrumbs ul li').eq(1).html('商品分成管理');
+                       // $(window.location.href="{:U('Admin/User/index')}");
+			
+			$('#main_iframe').attr("src","{:U('Admin/Goods/index')}");
+		});
+                
+                $(".navbar-brand").click(function(){
+			$("#sidebar").toggle();
+		});
+                
+                
+                
+		</script>
+		</body>
+</html>
